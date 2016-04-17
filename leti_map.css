@@ -1,21 +1,98 @@
 @charset "UTF-8";
-.str0 {stroke:black;stroke-width:75.5906}
-.fil1 {fill:none}
-.fil5 {fill:#68D5FF}
-.fil3 {fill:#7DD5AE}
-.fil9 {fill:#8ECF29}
-.fil6 {fill:#9CC4B4}
-.fil10 {fill:#B28D77}
-.fil4 {fill:#CBC7E4}
-.fil12 {fill:#CBE4D4}
-.fil16 {fill:#F6FFFF}
-.fil18 {fill:#FAFFFF}
-.fil14 {fill:#FDFBAD}
-.fil11 {fill:#FF0F4D}
-.fil8 {fill:#FF5775}
-.fil7 {fill:#FFA878}
-.fil0 {fill:#FFADAC}
-.fil15 {fill:#FFAED3}
-.fil2 {fill:#FFF400}
-.fil13 {fill:#FFF6D4}
-.fil17 {fill:white}
+.lineColor
+{
+	stroke:black;
+	stroke-width:75.5906
+}
+
+.backgroung
+{
+	fill:white;
+}
+
+.firstCorp
+{
+	fill:#68D5FF;
+}
+
+.twoCorp
+{
+	fill:#CBC7E4;
+}
+
+.threeCorp
+{
+	fill:#FFF400;
+}
+
+.fourCorp
+{
+	fill:#FFAED3;
+}
+
+.fiveCorp
+{
+	fill:#FFADAC;
+}
+
+.sevenCorp
+{
+	fill:#FF5775;
+}
+
+.eightCorp
+{
+	fill:#FF0F4D;
+}
+
+.CCorp
+{
+	fill:#9CC4B4;
+}
+
+.DCorp
+{
+	fill:#7DD5AE;
+}
+
+.ECorp
+{
+	fill:#B28D77;
+}
+
+.KCorp
+{
+	fill:#FFA878;
+}
+
+.MCorp
+{
+	fill:#8ECF29;
+}
+
+.OCorp
+{
+	fill:#CBE4D4;
+}
+
+.TCorp
+{
+	fill:#FFF6D4;
+}
+
+.PCorp
+{
+	fill:#FDFBAD;
+}
+
+.unknownCorp
+{
+	fill:black;
+}
+.label{
+  	font-size: 14px;
+}
+polygon:hover
+{
+   	opacity: 0.5;
+}
