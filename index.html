@@ -4,27 +4,59 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>Интерактивная карта</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-<figure id="imapc">
-  <object data="leti_map.svg" type="image/svg+xml" id="imap" width="60%" height="60%">
-    <p>К сожалению, вы используете устаревшую версию браузера, который не поддерживает интерактивную карту.</p>
-  </object>
-  <figcaption>SVG-карта Санкт-Петербургского государственного электротехнического университета «ЛЭТИ» им. В.И. Ульянова (Ленина) (СПбГЭТУ «ЛЭТИ»)</figcaption>
-</figure>
-<p id="status"></p>
+<div class="info" id="information">
+  <table id="areas">
+    <thead>
+      <tr>
+        <th id="status"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr> 
+        <td id="description"></td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
+
+<div id="image">
+	<figure id="imapc">
+		<object data="leti_map.svg" type="image/svg+xml" id="imap">
+			<p>К сожалению, вы используете устаревшую версию браузера, который не поддерживает интерактивную карту.</p>
+		</object>
+	<figcaption>SVG-карта Санкт-Петербургского государственного электротехнического университета «ЛЭТИ» им. В.И. Ульянова (Ленина) (СПбГЭТУ «ЛЭТИ»)</figcaption>
+	</figure>
+</div>
+
 	<script>//<![CDATA[
-		function svgElementClicked(theElement)
+		function svgElementMouseOver(theElement)
 		{
 			var s = document.getElementById("status");
 			if(theElement.id != 'lmap')
 			{
 				s.textContent = "Корпус " + theElement.id;
-			}else
-			s.textContent = " ";
+			}
+			else
+				s.textContent = "СПбГЭТУ «ЛЭТИ»";
+		}
+		
+		function svgElementClick(theElement)
+		{
+			var s = document.getElementById("status");
+			if(theElement.id != 'lmap')
+			{
+				alert("Корпус " + theElement.id);
+			}
+			else
+				alert("СПбГЭТУ «ЛЭТИ»");
 		}
 		//]]>
 	</script>
+	
+<script src="script.js"></script>
 </body>
 </html>

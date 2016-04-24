@@ -89,10 +89,7 @@
 {
 	fill:black;
 }
-.label{
-  	font-size: 5000px;
-	fill:black;
-}
+
 polygon:hover
 {
    	opacity: 0.5;

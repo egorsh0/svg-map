@@ -30,6 +30,9 @@
 <script type="text/ecmascript">
 <![CDATA[
    document.getElementById("lmap").addEventListener("mouseover", sendOverToParentDocument, false);
+   
+   document.getElementById("lmap").addEventListener("click", sendClickToParentDocument, false);
+   
 		function sendOverToParentDocument(evt)
 		{
 			// SVGElementInstance objects aren't normal DOM nodes, so fetch the corresponding 'use' element instead
@@ -37,7 +40,15 @@
 			if(target.correspondingUseElement)
 				target = target.correspondingUseElement;
 				
-      	window.parent.svgElementClicked(target);
+      	window.parent.svgElementMouseOver(target);
+		}
+		
+		function sendClickToParentDocument(evt)
+		{
+			var target = evt.target;
+			if(target.correspondingUseElement)
+				target = target.correspondingUseElement;
+			window.parent.svgElementClick(target);
 		}
 ]]></script>
 
