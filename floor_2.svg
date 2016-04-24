@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+ xml:space="preserve"
+ width="1024px" 
+ height="768px" 
+ version="1.1" 
+ style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+ viewBox="0 0 102400 76800"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:75.5906}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="2/2">
+  <polygon class="fil0 str0" points="18850,30810 15350,30750 15350,22750 21050,22750 21050,30750 20537,30750 20537,34050 18850,34050 "/>
+  <rect class="fil0 str0" x="20537" y="30750" width="3413" height="8900"/>
+  <rect class="fil0 str0" x="15337" y="30810" width="3513" height="8840"/>
+  <rect class="fil0 str0" x="18850" y="34050" width="1687" height="5600"/>
+  <rect class="fil0 str0" x="23950" y="30750" width="6300" height="8900"/>
+  <rect class="fil0 str0" x="30250" y="30750" width="6900" height="8900"/>
+  <rect class="fil0 str0" x="37150" y="30750" width="13000" height="8900"/>
+  <rect class="fil0 str0" x="50150" y="30750" width="9100" height="8900"/>
+  <rect class="fil0 str0" x="59250" y="30750" width="3400" height="8900"/>
+  <rect class="fil0 str0" x="62650" y="30750" width="3200" height="8900"/>
+  <rect class="fil0 str0" x="65850" y="30750" width="6800" height="8900"/>
+  <rect class="fil0 str0" x="72650" y="30750" width="6800" height="8900"/>
+  <rect class="fil0 str0" x="79450" y="30750" width="3900" height="4700"/>
+  <rect class="fil0 str0" x="79450" y="35450" width="3900" height="4200"/>
+  <rect class="fil0 str0" x="83350" y="30750" width="3800" height="8900"/>
+  <rect class="fil0 str0" x="87150" y="30750" width="3500" height="8900"/>
+  <rect class="fil0 str0" x="90650" y="30750" width="2612" height="8900"/>
+  <rect class="fil0 str0" x="93262" y="30750" width="4288" height="8900"/>
+  <rect class="fil0 str0" x="90650" y="29050" width="6900" height="1700"/>
+  <rect class="fil0 str0" x="90650" y="21850" width="6900" height="7200"/>
+  <rect class="fil0 str0" x="93250" y="42822" width="4300" height="9028"/>
+  <rect class="fil0 str0" x="89750" y="42822" width="3500" height="3428"/>
+  <rect class="fil0 str0" x="89750" y="46250" width="3500" height="5600"/>
+  <rect class="fil0 str0" x="82950" y="42822" width="6800" height="9028"/>
+  <rect class="fil0 str0" x="75850" y="42822" width="7100" height="9028"/>
+  <rect class="fil0 str0" x="68650" y="42822" width="7200" height="9028"/>
+  <rect class="fil0 str0" x="61350" y="42822" width="7300" height="9028"/>
+  <rect class="fil0 str0" x="58250" y="45250" width="3100" height="6600"/>
+  <rect class="fil0 str0" x="58250" y="42822" width="3100" height="2428"/>
+  <rect class="fil0 str0" x="53050" y="42822" width="5200" height="9028"/>
+  <rect class="fil0 str0" x="43650" y="42822" width="9400" height="9028"/>
+  <rect class="fil0 str0" x="39650" y="42822" width="4000" height="9028"/>
+  <rect class="fil0 str0" x="32950" y="42822" width="6700" height="9028"/>
+  <rect class="fil0 str0" x="29750" y="42822" width="3200" height="9028"/>
+  <rect class="fil0 str0" x="27050" y="42822" width="2700" height="5928"/>
+  <rect class="fil0 str0" x="27050" y="48750" width="2700" height="3100"/>
+  <rect class="fil0 str0" x="17950" y="42822" width="9100" height="9028"/>
+  <rect class="fil0 str0" x="15050" y="42822" width="2900" height="9028"/>
+  <rect class="fil0 str0" x="6950" y="42822" width="8100" height="6728"/>
+  <rect class="fil0 str0" x="15050" y="42822" width="2900" height="2832"/>
+  <polygon class="fil0 str0" points="15337,37150 15350,22750 21050,22750 21050,30750 90650,30750 90650,21850 97550,21850 97550,51850 15050,51850 15050,49550 6950,49550 7050,37150 "/>
+  <rect class="fil0 str0" x="93262" y="39650" width="4288" height="3172"/>
+ </g>
+</svg>
