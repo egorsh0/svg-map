@@ -8,11 +8,23 @@
 
 <body>
 <figure id="imapc">
-  <object data="leti_map.svg" type="image/svg+xml" id="imap" width="70%" height="70%">
+  <object data="leti_map.svg" type="image/svg+xml" id="imap" width="60%" height="60%">
     <p>К сожалению, вы используете устаревшую версию браузера, который не поддерживает интерактивную карту.</p>
   </object>
   <figcaption>SVG-карта Санкт-Петербургского государственного электротехнического университета «ЛЭТИ» им. В.И. Ульянова (Ленина) (СПбГЭТУ «ЛЭТИ»)</figcaption>
 </figure>
-
+<p id="status"></p>
+	<script>//<![CDATA[
+		function svgElementClicked(theElement)
+		{
+			var s = document.getElementById("status");
+			if(theElement.id != 'lmap')
+			{
+				s.textContent = "Корпус " + theElement.id;
+			}else
+			s.textContent = " ";
+		}
+		//]]>
+	</script>
 </body>
 </html>
