@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>Интерактивная карта</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 
 <div id="image">
 	<figure id="imapc">
-		<object name="img" data="leti_map.svg" type="image/svg+xml" id="imap">
+		<object name="img" data="img/leti_map.svg" type="image/svg+xml" id="imap">
 			<p>К сожалению, вы используете устаревшую версию браузера, который не поддерживает интерактивную карту.</p>
 		</object>
 	<figcaption>SVG-карта Санкт-Петербургского государственного электротехнического университета «ЛЭТИ» им. В.И. Ульянова (Ленина) (СПбГЭТУ «ЛЭТИ»)</figcaption>
@@ -50,14 +50,14 @@
 			if(theElement.id == '2')
 			{
 				if (flag == 0) {
-      			document.img.data = "floor_2.svg";
+      			document.img.data = "img/floor_2.svg";
       			flag = 1;
       		}
 			}
 		}
 		
 		function BackImage() {
-      	document.img.data = "leti_map.svg";
+      	document.img.data = "img/leti_map.svg";
       	flag = 0;
   		}
 		
@@ -68,6 +68,6 @@
   <input type = 'button' value = 'Назад' onClick = 'BackImage()' />
 </form>
 
-<script src="script.js"></script>
+<script src="script/script.js"></script>
 </body>
 </html>
