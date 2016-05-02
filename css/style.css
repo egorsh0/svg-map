@@ -1,45 +1,17 @@
 #imapc {
- width:90%;
+ width:80%;
 }
 
 #imap {
-   width:70%;
-   height:70%;
-}
-#areas {
-  width: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+    top: 0; bottom:0; left: 0; right:0;
+    margin: auto;
+	width:70%;
+	height:70%;
 }
 
 figcaption {
   text-align: center;
   width:50%;
-}
-
-table {
-  border-collapse: collapse;
-  border: 1px solid black;
-}
-
-td, th {
-  border: 1px solid silver;
-  padding: 0.2em 1em;
-}
-
-thead th {
-  background: #E0E0E0;
-  color: black;
-}
-
-tr {
-  background: white;
-}
-
-tr.highlight, tr:hover, tr:nth-child(even):hover, tr:nth-child(even).highlight,
-tr.red.highlight, tr.gray.highlight, tr.selected.highlight {
-  background: #FFFF99;
-  color: red;
 }
 
 .info

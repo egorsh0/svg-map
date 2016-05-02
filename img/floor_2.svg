@@ -1,63 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg"
- xml:space="preserve"
- width="1024px" 
- height="768px" 
- version="1.1" 
- style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
- viewBox="0 0 102400 76800"
- xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <style type="text/css">
+<?xml-stylesheet href="../css/maps.css" type="text/css"?>
+<svg xmlns:cc="http://web.resource.org/cc/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns="http://www.w3.org/2000/svg" 
+	width="100%" height="100%" 
+	version="1.1" 
+	id="floor"
+	style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+	viewBox="0 0 26458 9525"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <script type="text/ecmascript">
    <![CDATA[
-    .str0 {stroke:black;stroke-width:75.5906}
-    .fil0 {fill:none}
-   ]]>
-  </style>
- </defs>
- <g id="2/2">
-  <polygon class="fil0 str0" points="18850,30810 15350,30750 15350,22750 21050,22750 21050,30750 20537,30750 20537,34050 18850,34050 "/>
-  <rect class="fil0 str0" x="20537" y="30750" width="3413" height="8900"/>
-  <rect class="fil0 str0" x="15337" y="30810" width="3513" height="8840"/>
-  <rect class="fil0 str0" x="18850" y="34050" width="1687" height="5600"/>
-  <rect class="fil0 str0" x="23950" y="30750" width="6300" height="8900"/>
-  <rect class="fil0 str0" x="30250" y="30750" width="6900" height="8900"/>
-  <rect class="fil0 str0" x="37150" y="30750" width="13000" height="8900"/>
-  <rect class="fil0 str0" x="50150" y="30750" width="9100" height="8900"/>
-  <rect class="fil0 str0" x="59250" y="30750" width="3400" height="8900"/>
-  <rect class="fil0 str0" x="62650" y="30750" width="3200" height="8900"/>
-  <rect class="fil0 str0" x="65850" y="30750" width="6800" height="8900"/>
-  <rect class="fil0 str0" x="72650" y="30750" width="6800" height="8900"/>
-  <rect class="fil0 str0" x="79450" y="30750" width="3900" height="4700"/>
-  <rect class="fil0 str0" x="79450" y="35450" width="3900" height="4200"/>
-  <rect class="fil0 str0" x="83350" y="30750" width="3800" height="8900"/>
-  <rect class="fil0 str0" x="87150" y="30750" width="3500" height="8900"/>
-  <rect class="fil0 str0" x="90650" y="30750" width="2612" height="8900"/>
-  <rect class="fil0 str0" x="93262" y="30750" width="4288" height="8900"/>
-  <rect class="fil0 str0" x="90650" y="29050" width="6900" height="1700"/>
-  <rect class="fil0 str0" x="90650" y="21850" width="6900" height="7200"/>
-  <rect class="fil0 str0" x="93250" y="42822" width="4300" height="9028"/>
-  <rect class="fil0 str0" x="89750" y="42822" width="3500" height="3428"/>
-  <rect class="fil0 str0" x="89750" y="46250" width="3500" height="5600"/>
-  <rect class="fil0 str0" x="82950" y="42822" width="6800" height="9028"/>
-  <rect class="fil0 str0" x="75850" y="42822" width="7100" height="9028"/>
-  <rect class="fil0 str0" x="68650" y="42822" width="7200" height="9028"/>
-  <rect class="fil0 str0" x="61350" y="42822" width="7300" height="9028"/>
-  <rect class="fil0 str0" x="58250" y="45250" width="3100" height="6600"/>
-  <rect class="fil0 str0" x="58250" y="42822" width="3100" height="2428"/>
-  <rect class="fil0 str0" x="53050" y="42822" width="5200" height="9028"/>
-  <rect class="fil0 str0" x="43650" y="42822" width="9400" height="9028"/>
-  <rect class="fil0 str0" x="39650" y="42822" width="4000" height="9028"/>
-  <rect class="fil0 str0" x="32950" y="42822" width="6700" height="9028"/>
-  <rect class="fil0 str0" x="29750" y="42822" width="3200" height="9028"/>
-  <rect class="fil0 str0" x="27050" y="42822" width="2700" height="5928"/>
-  <rect class="fil0 str0" x="27050" y="48750" width="2700" height="3100"/>
-  <rect class="fil0 str0" x="17950" y="42822" width="9100" height="9028"/>
-  <rect class="fil0 str0" x="15050" y="42822" width="2900" height="9028"/>
-  <rect class="fil0 str0" x="6950" y="42822" width="8100" height="6728"/>
-  <rect class="fil0 str0" x="15050" y="42822" width="2900" height="2832"/>
-  <polygon class="fil0 str0" points="15337,37150 15350,22750 21050,22750 21050,30750 90650,30750 90650,21850 97550,21850 97550,51850 15050,51850 15050,49550 6950,49550 7050,37150 "/>
-  <rect class="fil0 str0" x="93262" y="39650" width="4288" height="3172"/>
- </g>
+   document.getElementById("floor").addEventListener("mouseover", sendOverToParentDocument, false);
+   
+   document.getElementById("floor").addEventListener("click", sendClickToParentDocument, false);
+   
+		function sendOverToParentDocument(evt)
+		{
+			// SVGElementInstance objects aren't normal DOM nodes, so fetch the corresponding 'use' element instead
+			var target = evt.target;
+			if(target.correspondingUseElement)
+				target = target.correspondingUseElement;
+				
+      	window.parent.svgElementMouseOver(target);
+		}
+		
+		function sendClickToParentDocument(evt)
+		{
+			var target = evt.target;
+			if(target.correspondingUseElement)
+				target = target.correspondingUseElement;
+			window.parent.svgElementClick(target);
+		}
+]]>
+  </script>
+
+   <rect id="stairThird" x="4114" y="2680" width="976" height="2544"/>
+   <rect id="_2224" x="2627" y="2697" width="1004" height="2527"/>
+   <rect id="_2225" x="3632" y="3623" width="482" height="1601"/>
+   <rect id="_2226" x="5090" y="2680" width="1801" height="2544"/>
+   <rect id="_2227" x="6891" y="2680" width="1973" height="2544"/>
+   <rect id="_2228" x="8864" y="2680" width="3717" height="2544"/>
+   <rect id="stairFirst" x="12580" y="2680" width="2602" height="2544"/>
+   <rect id="_2201_1" x="15181" y="2680" width="972" height="2544"/>
+   <rect id="_2201_2" x="16154" y="2680" width="915" height="2544"/>
+   <rect id="_2202" x="17068" y="2680" width="1944" height="2544"/>
+   <rect id="_2203" x="19012" y="2680" width="1944" height="2544"/>
+   <rect id="_2204_1" x="20956" y="2680" width="1115" height="1344"/>
+   <rect id="_2204" x="20956" y="4023" width="1115" height="1200"/>
+   <rect id="_2205" x="22070" y="2680" width="1086" height="2544"/>
+   <rect id="stairSecond" x="23157" y="2680" width="1001" height="2544"/>
+   <rect id="_2209" x="24158" y="2680" width="747" height="2544"/>
+   <rect id="_2208" x="24904" y="2680" width="1226" height="2544"/>
+   <rect id="_2207" x="24158" y="2194" width="1973" height="486"/>
+   <rect id="_2206" x="24158" y="135" width="1973" height="2058"/>
+   <rect id="_2211_1" x="24901" y="6131" width="1230" height="2581"/>
+   <rect id="_2211" x="23901" y="6131" width="1001" height="980"/>
+   <rect id="_2211_2" x="23901" y="7111" width="1001" height="1601"/>
+   <rect id="_2212" x="21957" y="6131" width="1944" height="2581"/>
+   <rect id="_2213" x="19927" y="6131" width="2030" height="2581"/>
+   <rect id="_2214" x="17868" y="6131" width="2058" height="2581"/>
+   <rect id="_2215" x="15782" y="6131" width="2086" height="2581"/>
+   <rect id="_2216_1" x="14895" y="6825" width="886" height="1886"/>
+   <rect id="_2216" x="14895" y="6131" width="886" height="687"/>
+   <rect id="_2217" x="13409" y="6131" width="1487" height="2581"/>
+   <rect id="_2218" x="10721" y="6131" width="2687" height="2581"/>
+   <rect id="_2219" x="9578" y="6131" width="1143" height="2574"/>
+   <rect id="_2220" x="7662" y="6131" width="1916" height="2581"/>
+   <rect id="_2221" x="6748" y="6131" width="915" height="2581"/>
+   <rect id="_2221_2" x="5976" y="6131" width="771" height="1694"/>
+   <rect id="_2221_1" x="5976" y="7825" width="771" height="886"/>
+   <rect id="_2222" x="3375" y="6131" width="2602" height="2581"/>
+   <rect id="_2222_1" x="2545" y="6960" width="829" height="1751"/>
+   <rect id="_2223" x="245" y="6131" width="2301" height="1923"/>
+   <rect id="_2222_2" x="2545" y="6131" width="829" height="824"/>
+   <rect id="_2210" x="24904" y="5224" width="1226" height="907"/>
+   <polygon id="unknown" points="2627,2697 3631,2697 3632,3623 4114,3623 4114,2680 4261,2680 4261,393 2632,393 "/>
+   <polygon id="corridor" points="259,4509 2627,4509 2627,5224 24904,5224 24904,6131 245,6131 "/>
 </svg>

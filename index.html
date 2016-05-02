@@ -8,21 +8,6 @@
 </head>
 
 <body>
-<div class="info" id="information">
-  <table id="areas">
-    <thead>
-      <tr>
-        <th id="status"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr> 
-        <td id="description"></td>
-      </tr> 
-    </tbody>
-  </table>
-</div>
-
 <div id="image">
 	<figure id="imapc">
 		<object name="img" data="img/leti_map.svg" type="image/svg+xml" id="imap">
@@ -32,6 +17,9 @@
 	</figure>
 </div>
 
+<div>
+  <label id="status">
+</div>
 	<script>//<![CDATA[
 		var flag = 0;
 		function svgElementMouseOver(theElement)
@@ -52,15 +40,14 @@
 				if (flag == 0) {
       			document.img.data = "img/floor_2.svg";
       			flag = 1;
-      		}
+				}
 			}
 		}
 		
 		function BackImage() {
-      	document.img.data = "img/leti_map.svg";
-      	flag = 0;
+			document.img.data = "img/leti_map.svg";
+			flag = 0;
   		}
-		
 		//]]>
 	</script>
 

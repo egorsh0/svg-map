@@ -94,3 +94,29 @@ polygon:hover
 {
    	opacity: 0.5;
 }
+
+rect
+{
+	stroke:black;
+	stroke-width:20;
+    fill:white;
+}
+
+rect:hover
+{
+	opacity: 0.5;
+}
+
+#unknown
+{
+	stroke:black;
+	stroke-width:20;
+	fill:white;
+}
+
+#corridor
+{
+	stroke:black;
+	stroke-width:20;
+	fill:white;
+}
