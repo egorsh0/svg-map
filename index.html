@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="jquery.tooltip.min.js"></script>
   <title>Интерактивная карта</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -13,12 +14,7 @@
 		<object name="img" data="img/leti_map.svg" type="image/svg+xml" id="imap">
 			<p>К сожалению, вы используете устаревшую версию браузера, который не поддерживает интерактивную карту.</p>
 		</object>
-	<figcaption>SVG-карта Санкт-Петербургского государственного электротехнического университета «ЛЭТИ» им. В.И. Ульянова (Ленина) (СПбГЭТУ «ЛЭТИ»)</figcaption>
 	</figure>
-</div>
-
-<div>
-  <label id="status">
 </div>
 	<script>//<![CDATA[
 		var flag = 0;
@@ -52,7 +48,7 @@
 	</script>
 
 <form>
-  <input type = 'button' value = 'Назад' onClick = 'BackImage()' />
+  <input type = 'button' value = 'Назад' onClick = 'BackImage()'/>
 </form>
 
 <script src="script/script.js"></script>

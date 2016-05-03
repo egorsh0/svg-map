@@ -1,94 +1,4 @@
 @charset "UTF-8";
-.lineColor
-{
-	stroke:black;
-	stroke-width:75.5906
-}
-
-.backgroung
-{
-	fill:white;
-}
-
-.firstCorp
-{
-	fill:#68D5FF;
-}
-
-.twoCorp
-{
-	fill:#CBC7E4;
-}
-
-.threeCorp
-{
-	fill:#FFF400;
-}
-
-.fourCorp
-{
-	fill:#FFAED3;
-}
-
-.fiveCorp
-{
-	fill:#FFADAC;
-}
-
-.sevenCorp
-{
-	fill:#FF5775;
-}
-
-.eightCorp
-{
-	fill:#FF0F4D;
-}
-
-.CCorp
-{
-	fill:#9CC4B4;
-}
-
-.DCorp
-{
-	fill:#7DD5AE;
-}
-
-.ECorp
-{
-	fill:#B28D77;
-}
-
-.KCorp
-{
-	fill:#FFA878;
-}
-
-.MCorp
-{
-	fill:#8ECF29;
-}
-
-.OCorp
-{
-	fill:#CBE4D4;
-}
-
-.TCorp
-{
-	fill:#FFF6D4;
-}
-
-.PCorp
-{
-	fill:#FDFBAD;
-}
-
-.unknownCorp
-{
-	fill:black;
-}
 
 polygon:hover
 {
@@ -105,6 +15,23 @@ rect
 rect:hover
 {
 	opacity: 0.5;
+	fill:yellow;
+	stroke:yellow;
+	stroke-width:100;
+}
+
+text
+{
+	font-weight:normal;
+	font-size:200px;
+	font-family:'Arial';
+	filter: alpha(Opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	cursor: default;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 #unknown
