@@ -8,6 +8,27 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
+<script>//<![CDATA[
+	var flag = 0;
+		
+	function svgElementClick(theElement)
+	{
+		if(theElement.id == '2')
+		{
+			if (flag == 0) {
+      		document.img.data = "img/floor_2.svg";
+      		flag = 1;
+			}
+		}
+	}
+		
+	function BackImage() {
+		document.img.data = "img/leti_map.svg";
+		flag = 0;
+  	}
+//]]>
+</script>
+
 <body>
 <div id="image">
 	<figure id="imapc">
@@ -16,36 +37,6 @@
 		</object>
 	</figure>
 </div>
-	<script>//<![CDATA[
-		var flag = 0;
-		function svgElementMouseOver(theElement)
-		{
-			var s = document.getElementById("status");
-			if(theElement.id != 'lmap')
-			{
-				s.textContent = "Корпус " + theElement.id;
-			}
-			else
-				s.textContent = "СПбГЭТУ «ЛЭТИ»";
-		}
-		
-		function svgElementClick(theElement)
-		{
-			if(theElement.id == '2')
-			{
-				if (flag == 0) {
-      			document.img.data = "img/floor_2.svg";
-      			flag = 1;
-				}
-			}
-		}
-		
-		function BackImage() {
-			document.img.data = "img/leti_map.svg";
-			flag = 0;
-  		}
-		//]]>
-	</script>
 
 <form>
   <input type = 'button' value = 'Назад' onClick = 'BackImage()'/>

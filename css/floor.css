@@ -1,8 +1,16 @@
 @charset "UTF-8";
-
-polygon:hover
+text
 {
-   	opacity: 0.5;
+	font-weight:normal;
+	font-size:200px;
+	font-family:'Arial';
+	filter: alpha(Opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	cursor: default;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 rect
@@ -18,20 +26,6 @@ rect:hover
 	fill:yellow;
 	stroke:yellow;
 	stroke-width:100;
-}
-
-text
-{
-	font-weight:normal;
-	font-size:200px;
-	font-family:'Arial';
-	filter: alpha(Opacity=50);
-	-moz-opacity: 0.5;
-	-khtml-opacity: 0.5;
-	cursor: default;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
 }
 
 #unknown

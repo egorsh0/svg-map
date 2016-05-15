@@ -1,0 +1,24 @@
+@charset "UTF-8";
+polygon
+{
+   	fill:#BEA883;
+}
+
+polygon:hover
+{
+   	opacity: 0.5;
+}
+
+#textId
+{
+	font-weight:normal;
+	font-size:500px;
+	font-family:'Arial';
+	filter: alpha(Opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	cursor: default;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}

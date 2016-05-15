@@ -1,19 +1,5 @@
-#imapc {
-	margin: 0 auto;
-	width:60%;
-	height:60%;
-}
-
-figcaption {
-  text-align: center;
-  width:50%;
-}
-
-.info
-{
-	float:right;
-	margin:8px;
-	padding:6px;
-	border:1px solid #bbbbbb;
-	width:400px;"
+#lmap {
+    background: #5f6a72; /* Цвет фона */
+    float: left; /* Блоки выстраиваются по горизонтали */
+    text-align: center; /* Выравнивание по центру */
 }
