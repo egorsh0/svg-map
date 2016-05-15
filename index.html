@@ -6,6 +6,7 @@
   <script src="jquery.tooltip.min.js"></script>
   <title>Интерактивная карта</title>
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-modal.css" rel="stylesheet">
 </head>
 
 <script>//<![CDATA[
@@ -38,9 +39,18 @@
 	</figure>
 </div>
 
-<form>
-  <input type = 'button' value = 'Назад' onClick = 'BackImage()'/>
-</form>
+<div style="text-align: center;">
+	<a href="#win" class="button button-green">Открыть окно</a>
+	<a href="javascript:BackImage();" class="button button-green" >Назад</a>
+</div>
+
+<!-- Модальное окно -->
+<a href="#x" class="overlay" id="win"></a>
+<div class="popup">
+    <h2>Тестовое модальное окно</h2>
+		Тест
+	<a class="close" title="Закрыть" href="#close"></a>
+</div> 
 
 <script src="script/script.js"></script>
 </body>
