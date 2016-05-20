@@ -3,32 +3,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="jquery.tooltip.min.js"></script>
   <title>Интерактивная карта</title>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-modal.css" rel="stylesheet">
 </head>
-
-<script>//<![CDATA[
-	var flag = 0;
-		
-	function svgElementClick(theElement)
-	{
-		if(theElement.id == '2')
-		{
-			if (flag == 0) {
-      		document.img.data = "img/floor_2.svg";
-      		flag = 1;
-			}
-		}
-	}
-		
-	function BackImage() {
-		document.img.data = "img/leti_map.svg";
-		flag = 0;
-  	}
-//]]>
-</script>
 
 <body>
 <div id="image">
@@ -40,17 +18,8 @@
 </div>
 
 <div style="text-align: center;">
-	<a href="#win" class="button button-green">Открыть окно</a>
 	<a href="javascript:BackImage();" class="button button-green" >Назад</a>
 </div>
-
-<!-- Модальное окно -->
-<a href="#x" class="overlay" id="win"></a>
-<div class="popup">
-    <h2>Тестовое модальное окно</h2>
-		Тест
-	<a class="close" title="Закрыть" href="#close"></a>
-</div> 
 
 <script src="script/script.js"></script>
 </body>
