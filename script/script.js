@@ -62,52 +62,31 @@ function BackImage() {
 }
 
 function toCorp(obj){
-    switch (obj.id){
-        case '1':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case '2':
-            if(!flagToJump) {
-                document.getElementById('imap').setAttribute('data','img/floor_2.svg');
-                flagToJump = 1;
-            }
-            break;
-        case '3':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case '4':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case '5':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case '7':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case '8':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case 'D':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case 'C':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case 'K':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case 'M':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case 'E':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case 'O':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
-        case 'T':
-            modalWindow.show('<h1>Корпус '  + obj.id + '</h1>');
-            break;
+    if(obj.id!='lmap' && obj.id!="") {
+        if(obj.id != '2')
+            modalWindow.show('<h1>Корпус ' + obj.id + '</h1>');
+        else
+            document.getElementById('imap').setAttribute('data','img/floor_2.svg');
+    }
+
+}
+
+function postHttp() {
+// 1. Создаём новый объект XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+
+// 2. Конфигурируем его: GET-запрос на URL 'phones.json'
+    xhr.open('GET', 'package.json', false);
+
+// 3. Отсылаем запрос
+    xhr.send('Hello server');
+    // 4. Если код ответа сервера не 200, то это ошибка
+    if (xhr.status != 200) {
+        // обработать ошибку
+        alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+    } else {
+        // вывести результат
+        alert( xhr.responseText ); // responseText -- текст ответа.
     }
 }
 
