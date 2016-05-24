@@ -57,7 +57,12 @@ var modalWindow = {
 }
 
 function BackImage() {
-    document.getElementById('imap').setAttribute('data','img/leti_map.svg');
+    var map = document.getElementById('imap');
+    map.style.visibility = 'visible';
+
+    var floor = document.getElementById('floorMap');
+    floor.style.visibility = 'hidden';
+
     flagToJump = 0;
 }
 
@@ -66,37 +71,55 @@ function toCorp(obj){
         if(obj.id != '2')
             modalWindow.show('<h1>Корпус ' + obj.id + '</h1>');
         else
-            document.getElementById('imap').setAttribute('data','img/floor_2.svg');
+        {
+            var map = document.getElementById('imap');
+            map.style.visibility = 'hidden';
+            var floor = document.getElementById('floorMap');
+            floor.style.visibility = 'visible';
+        }
     }
 
 }
 
-function postHttp() {
+function postHttp(id) {
 // 1. Создаём новый объект XMLHttpRequest
     var xhr = new XMLHttpRequest();
 
 // 2. Конфигурируем его: GET-запрос на URL 'phones.json'
-    xhr.open('GET', 'package.json', false);
+    xhr.open('GET', '/getData?id='+id, false);
 
 // 3. Отсылаем запрос
-    xhr.send('Hello server');
+    xhr.send();
     // 4. Если код ответа сервера не 200, то это ошибка
     if (xhr.status != 200) {
         // обработать ошибку
         alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
     } else {
         // вывести результат
-        alert( xhr.responseText ); // responseText -- текст ответа.
+        var response = JSON.parse(xhr.responseText); // responseText -- текст ответа.
+        alert(response.name);
     }
 }
 
 $(window).load(function () {
-    // Получаем доступ к SVG DOM
+    // Получаем доступ к SVG DOM карты
     var svgobject = document.getElementById('imap');
     if ('contentDocument' in svgobject)
         var svgdom = svgobject.contentDocument;
 
     svgdom.getElementById('lmap').addEventListener('click', function corp(event) {
+        var target = event.target;
+        if(target.correspondingUseElement)
+            target = target.correspondingUseElement;
+        toCorp(target);
+        postHttp(target.id);
+    }, false);
+    // Получаем доступ к SVG DOM этажу
+    var svgObjectFloor = document.getElementById('floorMap');
+    if ('contentDocument' in svgobject)
+        var svgDomFloor = svgObjectFloor.contentDocument;
+
+    svgDomFloor.getElementById('floor').addEventListener('click', function corp(event) {
         var target = event.target;
         if(target.correspondingUseElement)
             target = target.correspondingUseElement;

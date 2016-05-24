@@ -63,3 +63,15 @@ background-image: linear-gradient(to bottom, #69c03b, #5ca934 66%, #54992f);
 border-color: #3c6f22 #478228 #478228;
 background: #5ca934;
 }
+
+#imap
+{
+    position: absolute;
+    visibility: visible;
+}
+
+#floorMap
+{
+    position: absolute;
+    visibility: hidden;
+}

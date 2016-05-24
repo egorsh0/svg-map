@@ -45,7 +45,7 @@ TRUNCATE TABLE `group`;
 -- Дамп данных таблицы `group`
 --
 
-INSERT DELAYED IGNORE INTO `group` (`codeGroup`, `numberGroup`, `department`, `course`) VALUES
+INSERT INTO `group` (`codeGroup`, `numberGroup`, `department`, `course`) VALUES
 (1, 2301, 'КТИ', 4),
 (2, 2302, 'КТИ', 4),
 (3, 1305, 'КТИ', 5),
@@ -73,7 +73,7 @@ TRUNCATE TABLE `period`;
 -- Дамп данных таблицы `period`
 --
 
-INSERT DELAYED IGNORE INTO `period` (`numberLesson`, `start`, `end`) VALUES
+INSERT INTO `period` (`numberLesson`, `start`, `end`) VALUES
 (1, '08:00:00', '09:30:00'),
 (2, '09:50:00', '11:20:00'),
 (3, '11:40:00', '13:15:00'),
@@ -103,7 +103,7 @@ TRUNCATE TABLE `room`;
 -- Дамп данных таблицы `room`
 --
 
-INSERT DELAYED IGNORE INTO `room` (`codeHall`, `numberHall`, `nameHall`) VALUES
+INSERT INTO `room` (`codeHall`, `numberHall`, `nameHall`) VALUES
 (1, '2201.0', 'ФРТ'),
 (2, '2201.1', NULL),
 (3, '2202.0', NULL),
@@ -168,7 +168,7 @@ TRUNCATE TABLE `schedule`;
 -- Дамп данных таблицы `schedule`
 --
 
-INSERT DELAYED IGNORE INTO `schedule` (`scheduleCode`, `Weekday`, `Period`, `Teacher`, `Group`, `Subject`, `RoomcodeHall`) VALUES
+INSERT INTO `schedule` (`scheduleCode`, `Weekday`, `Period`, `Teacher`, `Group`, `Subject`, `RoomcodeHall`) VALUES
 (1, 1, 1, 1, 1, 1, 3),
 (2, 1, 3, 2, 2, 2, 3),
 (3, 2, 2, 1, 4, 5, 3),
@@ -228,7 +228,7 @@ TRUNCATE TABLE `subject`;
 -- Дамп данных таблицы `subject`
 --
 
-INSERT DELAYED IGNORE INTO `subject` (`subjectCode`, `nameSubject`) VALUES
+INSERT INTO `subject` (`subjectCode`, `nameSubject`) VALUES
 (1, 'Алгебра и Геометрия'),
 (2, 'Физика'),
 (3, 'Дискретная математика'),
@@ -259,7 +259,7 @@ TRUNCATE TABLE `teacher`;
 -- Дамп данных таблицы `teacher`
 --
 
-INSERT DELAYED IGNORE INTO `teacher` (`teacherCode`, `surname`, `name`, `patronymic`) VALUES
+INSERT INTO `teacher` (`teacherCode`, `surname`, `name`, `patronymic`) VALUES
 (1, 'Иванов', 'Иван', 'Иванович'),
 (2, 'Петров', 'Петр', 'Петрович'),
 (3, 'Сергеев', 'Сергей', 'Сергеевич'),
@@ -289,7 +289,7 @@ TRUNCATE TABLE `territory`;
 -- Дамп данных таблицы `territory`
 --
 
-INSERT DELAYED IGNORE INTO `territory` (`id`, `nameHouse`, `description`, `numFroors`) VALUES
+INSERT INTO `territory` (`id`, `nameHouse`, `description`, `numFroors`) VALUES
 (1, '1', 'Основные места: деканат ФЭЛ;\r\nкабинет директора;\r\nмузей А.С. Попова;\r\nвоенная кафедра', 4),
 (2, '2', 'Основные места:\r\nдеканат ФРТ;\r\nдеканат ФКТИ;\r\nвоенно-учетный стол', 4),
 (3, '3', 'Основные места:\r\nюридический отдел;\r\nбухгалтерия;\r\nректорат;\r\nдеканат ОФ', 4),
@@ -328,7 +328,7 @@ TRUNCATE TABLE `weekday`;
 -- Дамп данных таблицы `weekday`
 --
 
-INSERT DELAYED IGNORE INTO `weekday` (`dayCode`, `dayName`, `parity`) VALUES
+INSERT INTO `weekday` (`dayCode`, `dayName`, `parity`) VALUES
 (1, 'Понедельник', 'Нечетная'),
 (2, 'Понедельник', 'Четная'),
 (3, 'Вторник', 'Нечетная'),

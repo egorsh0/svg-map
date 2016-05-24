@@ -28,14 +28,7 @@ rect:hover
 	stroke-width:100;
 }
 
-#unknown
-{
-	stroke:black;
-	stroke-width:20;
-	fill:white;
-}
-
-#corridor
+polygon
 {
 	stroke:black;
 	stroke-width:20;
