@@ -9,6 +9,15 @@
 </head>
 
 <body>
+<!-- header -->
+<div id="header" class="header">
+	<div class="suggestboxHolder">
+		<input id="employee" type="text">
+	</div>
+	<img onclick="javascript:BackImage();" class="cross" id="cross" src="img/help/cross.png">
+	<div class="menuHolder" id="menu"></div>
+</div>
+
 <div id="image">
 	<figure id="imapc">
 		<object id="imap" data="img/leti_map.svg" type="image/svg+xml">
@@ -19,10 +28,6 @@
 			<p>К сожалению, вы используете устаревшую версию браузера, который не поддерживает интерактивную карту.</p>
 		</object>
 	</figure>
-</div>
-
-<div style="text-align: center;">
-	<a href="javascript:BackImage();" class="button button-green" >Назад</a>
 </div>
 
 <script src="script/script.js"></script>

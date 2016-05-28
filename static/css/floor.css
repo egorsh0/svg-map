@@ -1,6 +1,7 @@
 @charset "UTF-8";
 text
 {
+	pointer-events: none;
 	font-weight:normal;
 	font-size:200px;
 	font-family:'Arial';
@@ -11,6 +12,11 @@ text
 
 	-webkit-user-select: none;
 	-moz-user-select: none;
+}
+
+image
+{
+	pointer-events: none;
 }
 
 rect

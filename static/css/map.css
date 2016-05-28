@@ -11,6 +11,7 @@ polygon:hover
 
 #textId
 {
+	pointer-events: none;
 	font-weight:normal;
 	font-size:500px;
 	font-family:'Arial';

@@ -69,7 +69,20 @@ function BackImage() {
 function toCorp(obj){
     if(obj.id!='lmap' && obj.id!="") {
         if(obj.id != '2')
-            modalWindow.show('<h1>Корпус ' + obj.id + '</h1>');
+        {
+            var response = postHttp(obj.id, 'corp');
+            var stringsToWindow = response.description;
+            var strToView = stringsToWindow.split(/\?|&/);
+            stringsToWindow = '';
+            for(var i = 0; i < strToView.length; i++)
+                stringsToWindow = stringsToWindow + strToView[i] + '<br>';
+            var tableFromView = '<table cellspacing="0" id="maket">' +
+                ' <tr>' +
+                ' <td id="leftcol">Основные места</td><td id="rightcol">' + stringsToWindow + '</td>' +
+                '</tr> ' +
+                '</table>';
+            modalWindow.show('<h1>Корпус ' + obj.id + '</h1>' + tableFromView);
+        }
         else
         {
             var map = document.getElementById('imap');
@@ -81,12 +94,70 @@ function toCorp(obj){
 
 }
 
-function postHttp(id) {
+function toFloor(obj){
+    if(obj.id!='floor' && obj.id!="") {
+        if((obj.id != '2224') && (obj.id != '2201')) {
+            var response = postHttp(obj.id, 'floor');
+            if(response.numberGroup != "") {
+                var tableFromView = '<table cellspacing="0" id="maket">' +
+                    ' <tr>' +
+                    ' <td id="leftcol">Группа</td><td id="rightcol">' + response.numberGroup + '</td>' +
+                    '</tr> ' +
+                    ' <tr>' +
+                    ' <td id="leftcol"></td><td id="rightcol">' + response.start + ' // ' + response.end + '</td>' +
+                    '</tr> ' +
+                    ' <tr>' +
+                    ' <td id="leftcol">Предмет</td><td id="rightcol">' + response.nameSubject + '</td>' +
+                    '</tr> ' +
+                    ' <tr>' +
+                    ' <td id="leftcol">Преподаватель</td><td id="rightcol">' + response.name + ' ' + response.surname + ' ' + response.patronymic + '</td>' +
+                    '</tr> ' +
+                    '</table>';
+                modalWindow.show('<h1>' + obj.id + '</h1>' + tableFromView);
+            }
+        }else{
+            var response = postHttp(obj.id, 'floor');
+            var strToView = response.dean.split(/\?|&/);
+            var dean = '';
+            for(var i = 0; i < strToView.length; i++)
+                dean = dean + strToView[i] + '<br>';
+
+            strToView = response.depDean.split(/\?|&/);
+            var depDean = '';
+            for(var i = 0; i < strToView.length; i++)
+                depDean = depDean + strToView[i] + '<br>';
+
+            strToView = response.contacts.split(/\?|&/);
+            var contacts = '';
+            for(var i = 0; i < strToView.length; i++)
+                contacts = contacts + strToView[i] + '<br>';
+
+            var tableFromView = '<table cellspacing="0" id="maket">' +
+                ' <tr>' +
+                ' <td id="leftcol">Декан</td><td id="rightcol">' + dean + '<br>' +'</td>' +
+                '</tr> ' +
+                ' <tr>' +
+                ' <td id="leftcol">Зам.декана</td><td id="rightcol">' + depDean + '</td>' +
+                '</tr> ' +
+                ' <tr>' +
+                ' <td id="leftcol">Контакты</td><td id="rightcol">' + contacts + '</td>' +
+                '</tr> ' +
+                '</table>';
+            var office;
+            if(obj.id == '2224')
+                office = 'ФКТИ';
+            else office = 'ФРТ';
+            modalWindow.show('<h1>' + 'Деканат ' + office + '</h1>' + tableFromView);
+        }
+    }
+}
+
+function postHttp(id, map) {
 // 1. Создаём новый объект XMLHttpRequest
     var xhr = new XMLHttpRequest();
 
 // 2. Конфигурируем его: GET-запрос на URL 'phones.json'
-    xhr.open('GET', '/getData?id='+id, false);
+    xhr.open('GET', '/getData?id='+id + '?map='+map, false);
 
 // 3. Отсылаем запрос
     xhr.send();
@@ -97,7 +168,7 @@ function postHttp(id) {
     } else {
         // вывести результат
         var response = JSON.parse(xhr.responseText); // responseText -- текст ответа.
-        alert(response.name);
+        return response;
     }
 }
 
@@ -112,8 +183,9 @@ $(window).load(function () {
         if(target.correspondingUseElement)
             target = target.correspondingUseElement;
         toCorp(target);
-        postHttp(target.id);
     }, false);
+
+
     // Получаем доступ к SVG DOM этажу
     var svgObjectFloor = document.getElementById('floorMap');
     if ('contentDocument' in svgobject)
@@ -123,6 +195,6 @@ $(window).load(function () {
         var target = event.target;
         if(target.correspondingUseElement)
             target = target.correspondingUseElement;
-        toCorp(target);
+        toFloor(target);
     }, false);
 });

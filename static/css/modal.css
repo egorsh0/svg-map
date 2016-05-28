@@ -80,7 +80,7 @@
 }
 
 /* формируем кнопку закрытия */
-.close {
+#close {
     position: absolute;
     top: -10px;
     right: -10px;padding: 0;
@@ -106,13 +106,13 @@
     -o-transition: all ease .8s;
     transition: all ease .8s;
 }
-.close:before {
+#close:before {
     color: rgba(255, 255, 255, 0.9);
     content: "X";
     text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
     font-size: 12px;
 }
-.close:hover {
+#close:hover {
     background-color: rgba(252, 20, 0, 0.8);
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
