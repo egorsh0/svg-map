@@ -2,10 +2,17 @@
  * Created by egors on 20.05.2016.
  */
 var mysql      = require('mysql');
+
+function getWeekDay(date) {
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    return days[date.getDay()];
+}
+
 function createSelect() {
     //Получение названия дня недели
     var date = new Date(); //текущая дата
-    var nameDay = date.toLocaleString('en', {weekday: 'long'});
+    var nameDay = getWeekDay(date);
+    console.log(nameDay);
     //Опознание четности
     var parity;
     var year = new Date().getFullYear();
