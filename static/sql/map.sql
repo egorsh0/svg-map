@@ -1,34 +1,13 @@
--- phpMyAdmin SQL Dump
--- version 4.4.15.5
--- http://www.phpmyadmin.net
---
--- Хост: localhost
--- Время создания: Май 22 2016 г., 22:56
--- Версия сервера: 5.7.12
--- Версия PHP: 5.5.35
-
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- База данных: `map`
---
-CREATE DATABASE IF NOT EXISTS `map` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `map`;
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `group`
---
-
-DROP TABLE IF EXISTS `group`;
 CREATE TABLE IF NOT EXISTS `group` (
   `codeGroup` int(10) NOT NULL,
   `numberGroup` int(4) NOT NULL,
@@ -36,42 +15,17 @@ CREATE TABLE IF NOT EXISTS `group` (
   `course` int(1) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
---
--- Очистить таблицу перед добавлением данных `group`
---
-
-TRUNCATE TABLE `group`;
---
--- Дамп данных таблицы `group`
---
-
 INSERT INTO `group` (`codeGroup`, `numberGroup`, `department`, `course`) VALUES
 (1, 2301, 'КТИ', 4),
 (2, 2302, 'КТИ', 4),
 (3, 1305, 'КТИ', 5),
 (4, 3306, 'КТИ', 3);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `period`
---
-
-DROP TABLE IF EXISTS `period`;
 CREATE TABLE IF NOT EXISTS `period` (
   `numberLesson` int(10) NOT NULL,
   `start` time DEFAULT NULL,
   `end` time DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
-
---
--- Очистить таблицу перед добавлением данных `period`
---
-
-TRUNCATE TABLE `period`;
---
--- Дамп данных таблицы `period`
---
 
 INSERT INTO `period` (`numberLesson`, `start`, `end`) VALUES
 (1, '08:00:00', '09:30:00'),
@@ -81,27 +35,11 @@ INSERT INTO `period` (`numberLesson`, `start`, `end`) VALUES
 (5, '15:35:00', '16:55:00'),
 (6, '17:15:00', '18:45:00');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `room`
---
-
-DROP TABLE IF EXISTS `room`;
 CREATE TABLE IF NOT EXISTS `room` (
   `codeHall` int(10) NOT NULL,
   `numberHall` decimal(5,1) NOT NULL,
   `nameHall` varchar(100) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
-
---
--- Очистить таблицу перед добавлением данных `room`
---
-
-TRUNCATE TABLE `room`;
---
--- Дамп данных таблицы `room`
---
 
 INSERT INTO `room` (`codeHall`, `numberHall`, `nameHall`) VALUES
 (1, '2201.0', 'ФРТ'),
@@ -142,13 +80,6 @@ INSERT INTO `room` (`codeHall`, `numberHall`, `nameHall`) VALUES
 (36, '2233.0', NULL),
 (37, '2234.0', NULL);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `schedule`
---
-
-DROP TABLE IF EXISTS `schedule`;
 CREATE TABLE IF NOT EXISTS `schedule` (
   `scheduleCode` int(10) NOT NULL,
   `Weekday` int(10) DEFAULT NULL,
@@ -156,19 +87,10 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   `Teacher` int(10) DEFAULT NULL,
   `Group` int(10) DEFAULT NULL,
   `Subject` int(10) DEFAULT NULL,
-  `RoomcodeHall` int(10) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+  `Room` int(10) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 
---
--- Очистить таблицу перед добавлением данных `schedule`
---
-
-TRUNCATE TABLE `schedule`;
---
--- Дамп данных таблицы `schedule`
---
-
-INSERT INTO `schedule` (`scheduleCode`, `Weekday`, `Period`, `Teacher`, `Group`, `Subject`, `RoomcodeHall`) VALUES
+INSERT INTO `schedule` (`scheduleCode`, `Weekday`, `Period`, `Teacher`, `Group`, `Subject`, `Room`) VALUES
 (1, 1, 1, 1, 1, 1, 3),
 (2, 1, 3, 2, 2, 2, 3),
 (3, 2, 2, 1, 4, 5, 3),
@@ -205,28 +127,13 @@ INSERT INTO `schedule` (`scheduleCode`, `Weekday`, `Period`, `Teacher`, `Group`,
 (34, 4, 5, 5, 4, 6, 34),
 (35, 5, 2, 1, 2, 1, 35),
 (36, 6, 6, 3, 4, 3, 36),
-(37, 7, 2, 4, 3, 4, 37);
+(37, 7, 2, 4, 3, 4, 37),
+(38, 11, 4, 2, 3, 2, 12);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `subject`
---
-
-DROP TABLE IF EXISTS `subject`;
 CREATE TABLE IF NOT EXISTS `subject` (
   `subjectCode` int(10) NOT NULL,
   `nameSubject` varchar(100) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
-
---
--- Очистить таблицу перед добавлением данных `subject`
---
-
-TRUNCATE TABLE `subject`;
---
--- Дамп данных таблицы `subject`
---
 
 INSERT INTO `subject` (`subjectCode`, `nameSubject`) VALUES
 (1, 'Алгебра и Геометрия'),
@@ -236,43 +143,21 @@ INSERT INTO `subject` (`subjectCode`, `nameSubject`) VALUES
 (5, 'Математическая логика'),
 (6, 'Электричество и магнетизм');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `teacher`
---
-
-DROP TABLE IF EXISTS `teacher`;
 CREATE TABLE IF NOT EXISTS `teacher` (
   `teacherCode` int(10) NOT NULL,
   `surname` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   `name` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `patronymic` varchar(20) CHARACTER SET utf8 DEFAULT NULL
+  `patronymic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  `post` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
---
--- Очистить таблицу перед добавлением данных `teacher`
---
+INSERT INTO `teacher` (`teacherCode`, `surname`, `name`, `patronymic`, `post`) VALUES
+(1, 'Иванов', 'Иван', 'Иванович', ''),
+(2, 'Петров', 'Петр', 'Петрович', ''),
+(3, 'Сергеев', 'Сергей', 'Сергеевич', ''),
+(4, 'Алексеев', 'Алексей', 'Алексеевич', ''),
+(5, 'Егоров', 'Егор', 'Егорович', '');
 
-TRUNCATE TABLE `teacher`;
---
--- Дамп данных таблицы `teacher`
---
-
-INSERT INTO `teacher` (`teacherCode`, `surname`, `name`, `patronymic`) VALUES
-(1, 'Иванов', 'Иван', 'Иванович'),
-(2, 'Петров', 'Петр', 'Петрович'),
-(3, 'Сергеев', 'Сергей', 'Сергеевич'),
-(4, 'Алексеев', 'Алексей', 'Алексеевич'),
-(5, 'Егоров', 'Егор', 'Егорович');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `territory`
---
-
-DROP TABLE IF EXISTS `territory`;
 CREATE TABLE IF NOT EXISTS `territory` (
   `id` int(11) NOT NULL,
   `nameHouse` varchar(1) CHARACTER SET utf8 DEFAULT NULL,
@@ -280,25 +165,16 @@ CREATE TABLE IF NOT EXISTS `territory` (
   `numFroors` int(1) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
---
--- Очистить таблицу перед добавлением данных `territory`
---
-
-TRUNCATE TABLE `territory`;
---
--- Дамп данных таблицы `territory`
---
-
 INSERT INTO `territory` (`id`, `nameHouse`, `description`, `numFroors`) VALUES
-(1, '1', 'Основные места: деканат ФЭЛ;\r\nкабинет директора;\r\nмузей А.С. Попова;\r\nвоенная кафедра', 4),
-(2, '2', 'Основные места:\r\nдеканат ФРТ;\r\nдеканат ФКТИ;\r\nвоенно-учетный стол', 4),
-(3, '3', 'Основные места:\r\nюридический отдел;\r\nбухгалтерия;\r\nректорат;\r\nдеканат ОФ', 4),
-(4, '4', 'Основные места:\r\nстуденческая канцелярия', 4),
-(5, '5', 'Основные места:\r\nдеканат ФЭМ;\r\nмагазин;\r\nдеканат ГФ;\r\nдеканат ФЭЛ;\r\nдеканат ФИБС;', 5),
-(6, '7', 'Основные места:\r\nжилищно-эксплуатационный отдел', 2),
+(1, '1', 'деканат ФЭЛ?\r\nкабинет директора?\r\nмузей А.С. Попова?\r\nвоенная кафедра', 4),
+(2, '2', 'деканат ФРТ?\r\nдеканат ФКТИ?\r\nвоенно-учетный стол', 4),
+(3, '3', 'юридический отдел?\r\nбухгалтерия?\r\nректорат?\r\nдеканат ОФ', 4),
+(4, '4', 'студенческая канцелярия', 4),
+(5, '5', 'деканат ФЭМ?\r\nмагазин?\r\nдеканат ГФ?\r\nдеканат ФЭЛ?\r\nдеканат ФИБС?', 5),
+(6, '7', 'жилищно-эксплуатационный отдел', 2),
 (7, 'P', 'Кафедра русского языка', 2),
 (8, 'C', 'кафедра физического воспитания и спорта ', 4),
-(9, 'D', 'музей-квартира А.С. Попова\r\nздравпункт\r\nкомпьютерный класс кафедры ИИСТ', 4),
+(9, 'D', 'музей-квартира А.С. Попова?\r\nздравпункт?\r\nкомпьютерный класс кафедры ИИСТ', 4),
 (10, 'K', 'Не известно', NULL),
 (11, 'M', 'Нет данных', NULL),
 (12, 'E', 'Unknown', NULL),
@@ -306,69 +182,38 @@ INSERT INTO `territory` (`id`, `nameHouse`, `description`, `numFroors`) VALUES
 (14, 'O', 'Кто подскажет?', NULL),
 (15, 'T', 'Технолит', NULL);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `weekday`
---
-
-DROP TABLE IF EXISTS `weekday`;
 CREATE TABLE IF NOT EXISTS `weekday` (
   `dayCode` int(10) NOT NULL,
   `dayName` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `parity` varchar(20) CHARACTER SET utf8 DEFAULT NULL
+  `parity` int(1) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
---
--- Очистить таблицу перед добавлением данных `weekday`
---
-
-TRUNCATE TABLE `weekday`;
---
--- Дамп данных таблицы `weekday`
---
-
 INSERT INTO `weekday` (`dayCode`, `dayName`, `parity`) VALUES
-(1, 'Понедельник', 'Нечетная'),
-(2, 'Понедельник', 'Четная'),
-(3, 'Вторник', 'Нечетная'),
-(4, 'Вторник', 'Четная'),
-(5, 'Среда', 'Нечетная'),
-(6, 'Среда', 'Четная'),
-(7, 'Четверг', 'Нечетная'),
-(8, 'Четверг', 'Четная'),
-(9, 'Пятница', 'Нечетная'),
-(10, 'Пятница', 'Четная'),
-(11, 'Суббота', 'Нечетная'),
-(12, 'Суббота', 'Четная'),
-(13, 'Воскресенье', 'Нечетная'),
-(14, 'Воскресенье', 'Четная');
+(1, 'Monday', 1),
+(2, 'Monday', 0),
+(3, 'Tuesday', 1),
+(4, 'Tuesday', 0),
+(5, 'Wednesday', 1),
+(6, 'Wednesday', 0),
+(7, 'Thursday', 1),
+(8, 'Thursday', 0),
+(9, 'Friday', 1),
+(10, 'Friday', 0),
+(11, 'Saturday', 1),
+(12, 'Saturday', 0),
+(13, 'Sunday', 1),
+(14, 'Sunday', 0);
 
---
--- Индексы сохранённых таблиц
---
 
---
--- Индексы таблицы `group`
---
 ALTER TABLE `group`
   ADD PRIMARY KEY (`codeGroup`);
 
---
--- Индексы таблицы `period`
---
 ALTER TABLE `period`
   ADD PRIMARY KEY (`numberLesson`);
 
---
--- Индексы таблицы `room`
---
 ALTER TABLE `room`
   ADD PRIMARY KEY (`codeHall`);
 
---
--- Индексы таблицы `schedule`
---
 ALTER TABLE `schedule`
   ADD PRIMARY KEY (`scheduleCode`),
   ADD KEY `FKSchedule247577` (`Weekday`),
@@ -376,92 +221,48 @@ ALTER TABLE `schedule`
   ADD KEY `FKSchedule63470` (`Teacher`),
   ADD KEY `FKSchedule459683` (`Subject`),
   ADD KEY `FKSchedule363365` (`Group`),
-  ADD KEY `FKSchedule871686` (`RoomcodeHall`);
+  ADD KEY `FKSchedule871686` (`Room`);
 
---
--- Индексы таблицы `subject`
---
 ALTER TABLE `subject`
   ADD PRIMARY KEY (`subjectCode`);
 
---
--- Индексы таблицы `teacher`
---
 ALTER TABLE `teacher`
   ADD PRIMARY KEY (`teacherCode`);
 
---
--- Индексы таблицы `territory`
---
 ALTER TABLE `territory`
   ADD UNIQUE KEY `id_3` (`id`),
   ADD KEY `id` (`id`),
   ADD KEY `id_2` (`id`);
 
---
--- Индексы таблицы `weekday`
---
 ALTER TABLE `weekday`
   ADD PRIMARY KEY (`dayCode`);
 
---
--- AUTO_INCREMENT для сохранённых таблиц
---
 
---
--- AUTO_INCREMENT для таблицы `group`
---
 ALTER TABLE `group`
   MODIFY `codeGroup` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT для таблицы `period`
---
 ALTER TABLE `period`
   MODIFY `numberLesson` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT для таблицы `room`
---
 ALTER TABLE `room`
   MODIFY `codeHall` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
---
--- AUTO_INCREMENT для таблицы `schedule`
---
 ALTER TABLE `schedule`
-  MODIFY `scheduleCode` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
---
--- AUTO_INCREMENT для таблицы `subject`
---
+  MODIFY `scheduleCode` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 ALTER TABLE `subject`
   MODIFY `subjectCode` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT для таблицы `teacher`
---
 ALTER TABLE `teacher`
   MODIFY `teacherCode` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT для таблицы `territory`
---
 ALTER TABLE `territory`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
---
--- AUTO_INCREMENT для таблицы `weekday`
---
 ALTER TABLE `weekday`
   MODIFY `dayCode` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
---
--- Ограничения внешнего ключа сохраненных таблиц
---
 
---
--- Ограничения внешнего ключа таблицы `schedule`
---
 ALTER TABLE `schedule`
   ADD CONSTRAINT `FKSchedule247577` FOREIGN KEY (`Weekday`) REFERENCES `weekday` (`dayCode`),
   ADD CONSTRAINT `FKSchedule265545` FOREIGN KEY (`Period`) REFERENCES `period` (`numberLesson`),
   ADD CONSTRAINT `FKSchedule363365` FOREIGN KEY (`Group`) REFERENCES `group` (`codeGroup`),
   ADD CONSTRAINT `FKSchedule459683` FOREIGN KEY (`Subject`) REFERENCES `subject` (`subjectCode`),
   ADD CONSTRAINT `FKSchedule63470` FOREIGN KEY (`Teacher`) REFERENCES `teacher` (`teacherCode`),
-  ADD CONSTRAINT `FKSchedule871686` FOREIGN KEY (`RoomcodeHall`) REFERENCES `room` (`codeHall`);
+  ADD CONSTRAINT `FKSchedule871686` FOREIGN KEY (`Room`) REFERENCES `room` (`codeHall`);
+SET FOREIGN_KEY_CHECKS=1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
