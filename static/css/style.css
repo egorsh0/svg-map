@@ -51,6 +51,34 @@
     visibility: hidden;
 }
 
+#homeButton
+{
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    width: 20%;
+    height: 20%;
+    visibility: hidden;
+    border: 3px solid black; /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
+}
+#homeButton:hover
+{
+    opacity: 0.5;
+}
+
+#floatTip {
+    position: absolute; /* Абсолютное позиционирование */
+    width: 100px; /* Ширина блока */
+    display: none; /* Прячем от показа */
+    border: 1px solid #000; /* Параметры рамки */
+    padding: 4px; /* Поля вокруг  текста */
+    font-family: sans-serif; /* Рубленый шрифт */
+    font-size: 9pt; /* Размер  шрифта */
+    color: #333; /* Цвет текста */
+    background: #ffe5ff; /* Цвет фона */
+    text-align:center;
+}
+
 #maket {
     width: 100%; /* Ширина всей таблицы */
 }

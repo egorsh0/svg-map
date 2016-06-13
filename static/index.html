@@ -11,10 +11,12 @@
 <body>
 <!-- header -->
 <div id="header" class="header">
+	<!--
 	<div class="suggestboxHolder">
-		<input id="employee" type="text">
+		<input id="employee" type="text" onkeydown="search(this);">
 	</div>
-	<img onclick="javascript:BackImage();" class="cross" id="cross" src="img/help/cross.png">
+	<img class="cross" id="cross" src="img/help/cross.png" onclick="clear();">
+	-->
 	<div class="menuHolder" id="menu"></div>
 </div>
 
@@ -27,6 +29,12 @@
 		<object id="floorMap" data="img/floor_2.svg" type="image/svg+xml">
 			<p>К сожалению, вы используете устаревшую версию браузера, который не поддерживает интерактивную карту.</p>
 		</object>
+
+		<img id="homeButton" src="img/leti_map.svg" type="image/svg+xml" onclick="BackImage();"
+			 onMouseOver="toolTip('На главную страницу')" onMouseOut="toolTip()">
+		</img>
+
+		<div id="floatTip"></div>
 	</figure>
 </div>
 
