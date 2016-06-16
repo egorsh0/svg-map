@@ -115,7 +115,7 @@ function toFloor(obj){
                     ' <td id="leftcol">Предмет</td><td id="rightcol">' + response.nameSubject + '</td>' +
                     '</tr> ' +
                     ' <tr>' +
-                    ' <td id="leftcol">Преподаватель</td><td id="rightcol">' + response.name + ' ' + response.surname + ' ' + response.patronymic + '</td>' +
+                    ' <td id="leftcol">Преподаватель</td><td id="rightcol">' + response.surname + ' ' + response.name + ' ' + response.patronymic + '</td>' +
                     '</tr> ' +
                     '</table>';
                 modalWindow.show('<h1>' + obj.id + '</h1>' + tableFromView);

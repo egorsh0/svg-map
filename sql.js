@@ -12,7 +12,6 @@ function createSelect() {
     //Получение названия дня недели
     var date = new Date(); //текущая дата
     var nameDay = getWeekDay(date);
-    console.log(nameDay);
     //Опознание четности
     var parity;
     var year = new Date().getFullYear();
@@ -73,6 +72,7 @@ module.exports = {
 
         connection.query(selectToRoom, createID(id), function(err, row) {
             if(row.length != 0) {
+                var sizeRow = row.length;
                 var group = row[0].Group;
                 var period = row[0].Period;
                 var subject = row[0].Subject;
